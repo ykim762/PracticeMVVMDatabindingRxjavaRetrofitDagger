@@ -1,0 +1,105 @@
+<layout>
+
+    <data>
+        <import type="com.yeji.practiceinterview.app.Helper"/>
+        <variable
+            name="weather"
+            type="com.yeji.practiceinterview.data.model.WeatherResponse" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:text="Current Weather"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+<!--        android:text='@{String.format("%s", Helper.Companion.convertDate(weather.current.dt))}'-->
+
+        <TextView
+
+            android:id="@+id/text_view_date"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{String.valueOf(weather.lat)}"
+            android:id="@+id/text_view_lat"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{String.valueOf(weather.lon)}"
+            android:id="@+id/text_view_lon"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{weather.timezone}"
+            android:id="@+id/text_view_timezone"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{String.valueOf(weather.current.temp)}"
+            android:id="@+id/text_view_temp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{String.valueOf(weather.current.feels_like)}"
+            android:id="@+id/text_view_feel_like"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{String.valueOf(weather.current.pressure)}"
+            android:id="@+id/text_view_pressure"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@{String.valueOf(weather.current.humidity)}"
+            android:id="@+id/text_view_humidity"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Daily Weather"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
