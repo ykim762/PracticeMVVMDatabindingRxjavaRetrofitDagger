@@ -37,7 +37,7 @@ data class Daily(
     val pressure: Int,
     val sunrise: Int,
     val sunset: Int,
-    val temp: Temp,
+    var temp: Temp,
     val uvi: Double,
     val weather: List<WeatherX>,
     val wind_deg: Int,
